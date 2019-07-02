@@ -15,6 +15,7 @@ RUN apt-get update && \
         software-properties-common \
         wget
 
+# Install Docker client
 RUN rm -rf /var/lib/apt/lists/* && \
     curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     add-apt-repository \
@@ -23,7 +24,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
     stable" && \
     apt-get update && apt-get install docker-ce-cli
 
-
+# Install Gradle
 ARG GRADLE_ID=10000
 ARG GRADLE_DOWNLOAD_SHA256=bed2bdd3955be5a09ca7e0201e9d131f194f7f6c466e1795a733733ccfb09f25
 RUN set -o errexit -o nounset \
