@@ -10,4 +10,4 @@ securityContext:
   ...
 ```
 
-Comes with a docker client for jobs that need it.
+Comes with a docker client for jobs that need it. (Relies on a docker server to be availabe via a mounted volume or a DinD sidecar).
